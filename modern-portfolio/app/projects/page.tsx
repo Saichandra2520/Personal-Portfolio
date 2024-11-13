@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
-import { ChevronDown, ChevronUp, ExternalLink, Github, Briefcase } from 'lucide-react'
+import { ChevronDown, ChevronUp, ExternalLink, Github } from 'lucide-react'
 
 const projects = [
   {
@@ -124,7 +124,7 @@ export default function Projects() {
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <Card key={project.title} className="overflow-hidden h-full flex flex-col">
                 <Image
                   src={project.image}

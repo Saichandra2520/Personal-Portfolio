@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Phone, ChevronDown, Download } from 'lucide-react'
+import { Github, Linkedin, Mail, ChevronDown, Download } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'

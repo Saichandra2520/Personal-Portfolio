@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 
 const floatingWords = [
@@ -13,13 +13,22 @@ const floatingWords = [
   { text: "Hire Me!", x: 0, y: -180 }
 ]
 
+// Define the Particle type
+type Particle = {
+  id: number
+  x: number
+  y: number
+  size: number
+  color: string
+}
+
 export default function Experience() {
   const [isExploding, setIsExploding] = useState(false)
-  const [particles, setParticles] = useState([])
+  const [particles, setParticles] = useState<Particle[]>([]) // Set particles type
   const controls = useAnimation()
 
   const createParticles = () => {
-    const newParticles = []
+    const newParticles: Particle[] = [] // Specify type here
     for (let i = 0; i < 50; i++) {
       newParticles.push({
         id: i,
@@ -59,20 +68,19 @@ export default function Experience() {
         Ready for New Opportunities
       </motion.h1>
       
-      <div className="relative w-full h-[400px] flex items-center justify-center">
+      <div className="relative w-full h-[600px] flex items-center justify-center">
         <motion.div
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 1, type: "spring", stiffness: 260, damping: 20 }}
           className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-purple-500 shadow-xl"
         >
-          <Image
-            
+          {/* <Image
             alt="Professional headshot"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          /> */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-tr from-purple-500/50 to-indigo-500/50"
             initial={{ opacity: 0 }}
@@ -141,7 +149,7 @@ export default function Experience() {
           animate={controls}
           custom={0}
         >
-          As a fresh graduate, I'm excited to bring my enthusiasm, creativity, and strong foundation in software development to a dynamic team.
+          As a fresh graduate, I am excited to bring my enthusiasm, creativity, and strong foundation in software development to a dynamic team.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
