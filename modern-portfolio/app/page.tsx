@@ -28,14 +28,14 @@ export default function Home() {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
-            Saichandra Vallakatla
+            SAICHANDRA VALLAKATLA
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-6">
             Full-Stack Developer & Cloud Enthusiast
           </p>
           <p className="text-lg mb-8 max-w-lg mx-auto md:mx-0">
-            Passionate about creating scalable web applications and exploring cloud technologies. 
-            Final year student with hands-on experience in modern web development and microservices architecture.
+          Passionate about creating scalable web applications and exploring cloud technologies.
+          I am a recent graduate with hands-on experience in modern web development and microservices architecture
           </p>
           <div className="flex justify-center md:justify-start space-x-4 mb-8">
             <Link href="https://www.linkedin.com/in/vallakatla-sai-chandra-1b0093206/" target="_blank" rel="noopener noreferrer">
